@@ -1,21 +1,21 @@
 # Auto Flight ML-Agents
-This is Drone Autonomous Flight using Unity ML-Agents.
-
-# Unity ML-Agent Drone Autonomous Flight
-Unity ML-Agent for Drone Autonomous Flight
-- Unity ML Agent: [[Unity ML Agent](https://github.com/Unity-Technologies/ml-agents)]
-- Fbprophet: 
+This is Drone Autonomous Flight using Unity ML-Agents.  
+본 프로젝트는 Unity ML Agent를 활용한 LiDAR 기반 머신러닝을 이용한 드론 자율비행 시스템으로, 장애물(사물)을 회피하여 목적지까지 자율적으로 비행하는 시스템이다. LiDAR를 이용하여 장애물(사물)을 탐지하고, 탐지한 장애물(사물)의 거리정보를 기반으로 Unity ML Agent Package를 이용하여 PPO(Proximal Policy Optimization) 기반의 머신러닝을 수행하여, 드론 비행 시 발생하는 장애물에 대한 회피 알고리즘을 제안하고, 테스트환경에서 수행한 뒤 성능을 확인한다.
+- [Unity ML-Agent](https://github.com/Unity-Technologies/ml-agents): https://github.com/Unity-Technologies/ml-agents
 
 ## 1. Environments
 
-- Window 10
-- Python 3.7.6
-- python 3.8.5 (Anaconda)
 - Unity
 - Unity ML Agent
+- C# Script
+- Anaconda3(Python 3.8.5)
+- Window 10
+- Intel Core i5-6600
+- RAM DDR4-2133MHz(PC4-17000) 16GB
+- NVIDIA GeForce GTX 1060 6GB
 
 ### 1. 1 Unity ML-Agents
-Download recent version of release branch at https://github.com/Unity-Technologies/ml-agents.
+Download recent version of release branch at https://github.com/Unity-Technologies/ml-agents.  
 The location of 'ml-agents' is like below or free.
 ```
 ㄴroot
