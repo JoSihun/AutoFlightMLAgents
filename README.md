@@ -3,6 +3,7 @@ This is Drone Autonomous Flight using Unity ML-Agents.
 본 프로젝트는 Unity ML Agent를 활용한 LiDAR 기반 머신러닝을 이용한 드론 자율비행 시스템으로, 장애물(사물)을 회피하여 목적지까지 자율적으로 비행하는 시스템이다. LiDAR를 이용하여 장애물(사물)을 탐지하고, 탐지한 장애물(사물)의 거리정보를 기반으로 Unity ML Agent Package를 이용하여 PPO(Proximal Policy Optimization) 기반의 머신러닝을 수행하여, 드론 비행 시 발생하는 장애물에 대한 회피 알고리즘을 제안하고, 테스트환경에서 수행한 뒤 성능을 확인한다.
 - [Unity ML-Agent](https://github.com/Unity-Technologies/ml-agents): https://github.com/Unity-Technologies/ml-agents
 
+
 ## 1. Environments
 
 - Unity
@@ -23,13 +24,33 @@ The location of 'ml-agents' is like below or free.
   ㄴml-agents  
 ```
 
+
 ## 2. Main Configuration
 
-### 2. 1 Lidar based on Automous Flight
+### 2. 1 Main Architecture
+This image shows how machine learning works.  
+Unity ML-Agents has 5 different functions which are  
+`Initialize`, `OnEpisodeBegin`, `CollectObservations`, `OnActionReceived`, `Heuristic`  
+**`Initialize`, `OnEpisodeBegin`, `CollectObservations`, `OnActionReceived`, `Heuristic`**
+<p align="center"><img width="100%" src="document/images/Daily_Analysis_001.png" /></p>
+
+### 2. 2 Sub Arhitecture
+This image shows how **`agent`** learn.
+<p align="center"><img width="100%" src="document/images/Daily_Analysis_001.png" /></p>
+
+
+
+
+### 2. 3 LiDAR based on Automous Flight
 Simulation for Drone Autonomous Flight with Lidar System
 
-### 2. 2 Camera based on Autonomous Flight
-Simulation for Drone Autonomous Flight with Camera System
+
+
+
+
+
+
+
 
 ## 3. Train
 
