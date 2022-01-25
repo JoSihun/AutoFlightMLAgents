@@ -89,23 +89,25 @@ a reward is set according to the measured distance information.
 ### 4. 1 TEST01
 <p align="center"><img width="75%" src="Images/Test_001.jpg" /></p>
 
-```bash
-
-```
-- `Analyzer.py` will analyze the data of coin price at the time of execution.
-- Analyzed result will be saved in `root` directory as `.xlsm` file.
+- Tried 100 times.
+- Achieved about 24s Average Time.
+- Achieved 96% Accuracy.
 
 ### 4. 2 TEST02
 <p align="center"><img width="75%" src="Images/Test_002.png" /></p>
+
+- Tried 100 times.
+- Achieved about 24s Average Time.
+- Achieved 86% Accuracy.
 
 
 ## 5. Results
 
 ### 5. 1 Demo Simulation
 
-<p align="center"><img width="100%" src="Images/Demo_001.png" /></p>
-<p align="center"><img width="100%" src="Images/Demo_002.jpg" /></p>
-<p align="center"><img width="100%" src="Images/Demo_003.jpg" /></p>
+<p align="center"><img width="75%" src="Images/Demo_001.png" /></p>
+<p align="center"><img width="75%" src="Images/Demo_002.jpg" /></p>
+<p align="center"><img width="75%" src="Images/Demo_003.jpg" /></p>
 
 ### 5. 2 Result Analize
 - Accuracy
