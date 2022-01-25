@@ -29,32 +29,35 @@ This is Drone Autonomous Flight using Unity ML-Agents.
 ## 2. Main Configuration
 
 ### 2. 1 Main Architecture
-This image shows how drone autonomous flight machine learning works.  
-Unity ML-Agents has 5 different functions below.
+- This image shows how drone autonomous flight machine learning works.  
+- Unity ML-Agents has 5 different functions below.  
 **`Initialize`, `OnEpisodeBegin`, `CollectObservations`, `OnActionReceived`, `Heuristic`.**
-**`Heuristic`** is excluded because it is just checking function that if actions work or not.
+- **`Heuristic`** is excluded because it is just checking function that if actions work or not.  
+
 <p align="center"><img width="75%" src="Images/Architecture_001.jpg" /></p>
 
-- First, get Environment Informations from Environment such as Map Information, Target Position, Agent Position etc.  
-- Then, update the reward and modify the behavior to get better reward from Unity ML Agent.  
-- During Learning, the learning information is transmitted to the MonitoringUI.  
+- First, get Environment Informations from `Environment` such as `Map Information`, `Target Position`, `Agent Position` etc.  
+- Then, update the reward and modify the behavior to get better reward from `Unity ML Agent`.  
+- During Learning, the learning information is transmitted to the `MonitoringUI`.  
 
 ### 2. 2 Sub Arhitecture
-This image shows how **`agent`** learn.
+- This image shows how `Agent` learns from `Unity ML Agent`.
+
 <p align="center"><img width="75%" src="Images/Architecture_002.jpg" /></p>
 
-
-
+- A Behavior is selected automatically based on reward in Communiator from Unity ML Agent.  
+- The Drone performs actions and detects obstacles by means of LiDAR sensors.  
+- After determining whether the object detected by the sensor is an obstacle or a target,  
+a reward is set according to the measured distance information.
 
 ### 2. 3 LiDAR based on Automous Flight
-Simulation for Drone Autonomous Flight with Lidar System
+- This Autonomous Flight Simulation is based on LiDAR System.  
+
 <p align="center"><img width="50%" src="Images/LiDAR_001.png" /></p>
 
-
-
-
-
-
+- The light is emitted to the target and the reflected light is detected by the sensor around the light source.  
+- Measure time of flight(ToF) for light to return.  
+- Measure the distance(D) to the target using the constant speed of light(c).  
 
 
 ## 3. Train
