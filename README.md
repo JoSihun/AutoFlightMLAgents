@@ -44,7 +44,7 @@ This image shows how **`agent`** learn.
 
 ### 2. 3 LiDAR based on Automous Flight
 Simulation for Drone Autonomous Flight with Lidar System
-<p align="center"><img width="75%" src="Images/LiDAR_001.jpg" /></p>
+<p align="center"><img width="75%" src="Images/LiDAR_001.png" /></p>
 
 
 
@@ -55,14 +55,14 @@ Simulation for Drone Autonomous Flight with Lidar System
 
 ## 3. Train
 ### 3. 1 Set Learning Environment
-<p align="center"><img width="75%" src="Images/Learning_001.jpg" /></p>
+<p align="center"><img width="75%" src="Images/Learning_001.png" /></p>
 
 ### 3. 2 Training
 After set learning environment, start machine learning with `Anaconda3` like below.
-<p align="center"><img width="75%" src="Images/Anaconda_001.jpg" /></p>
-<p align="center"><img width="75%" src="Images/Anaconda_002.jpg" /></p>
-<p align="center"><img width="75%" src="Images/Anaconda_003.jpg" /></p>
-<p align="center"><img width="75%" src="Images/Anaconda_004.jpg" /></p>
+<p align="center"><img width="75%" src="Images/Anaconda_001.png" /></p>
+<p align="center"><img width="75%" src="Images/Anaconda_002.png" /></p>
+<p align="center"><img width="75%" src="Images/Anaconda_003.png" /></p>
+<p align="center"><img width="75%" src="Images/Anaconda_004.png" /></p>
 
 ## 4. Run
 
