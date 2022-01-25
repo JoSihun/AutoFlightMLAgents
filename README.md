@@ -69,11 +69,15 @@ a reward is set according to the measured distance information.
 
 <p align="center"><img width="75%" src="Images/Learning_001.png" /></p>
 
-### 3. 2 Training
-After set learning environment, start machine learning with `Anaconda3` like below.
+### 3. 2 AutoFlight.yaml
+- Make `yaml` file like below.
+<p align="center"><img width="75%" src="Images/yamlfile.png" /></p>
+
+### 3. 3 Training
+- After set learning environment, start machine learning with `Anaconda3` like below.  
 ```anaconda3
 ~/ml-agents> mlagents-learn config/ppo/AutoFlight.yaml --run-id=AutoFlight
-```
+```  
 <p align="center"><img width="75%" src="Images/Anaconda_001.png" /></p>
 <p align="center"><img width="75%" src="Images/Anaconda_002.png" /></p>
 <p align="center"><img width="75%" src="Images/Anaconda_003.png" /></p>
@@ -84,6 +88,7 @@ After set learning environment, start machine learning with `Anaconda3` like bel
 
 ### 4. 1 TEST01
 <p align="center"><img width="75%" src="Images/Test_001.jpg" /></p>
+
 ```bash
 
 ```
