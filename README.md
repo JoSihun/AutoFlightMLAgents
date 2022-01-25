@@ -21,6 +21,7 @@ The location of 'ml-agents' is like below or free.
 ```
 ㄴroot
   ㄴAutoFlight  
+  ㄴImages  
   ㄴml-agents  
 ```
 
@@ -28,22 +29,22 @@ The location of 'ml-agents' is like below or free.
 ## 2. Main Configuration
 
 ### 2. 1 Main Architecture
-This image shows how machine learning works.  
-Unity ML-Agents has 5 different functions which are  
-`Initialize`, `OnEpisodeBegin`, `CollectObservations`, `OnActionReceived`, `Heuristic`  
-**`Initialize`, `OnEpisodeBegin`, `CollectObservations`, `OnActionReceived`, `Heuristic`**
-<p align="center"><img width="75%" src="Images/img_001.jpg" /></p>
+This image shows how drone autonomous flight machine learning works.  
+Unity ML-Agents has 5 different functions.
+**`Initialize`, `OnEpisodeBegin`, `CollectObservations`, `OnActionReceived`, `Heuristic`.**
+
+<p align="center"><img width="75%" src="Images/Architecture_001.jpg" /></p>
 
 ### 2. 2 Sub Arhitecture
 This image shows how **`agent`** learn.
-<p align="center"><img width="75%" src="Images/img_002.jpg" /></p>
+<p align="center"><img width="75%" src="Images/Architecture_002.jpg" /></p>
 
 
 
 
 ### 2. 3 LiDAR based on Automous Flight
 Simulation for Drone Autonomous Flight with Lidar System
-
+<p align="center"><img width="75%" src="Images/LiDAR_001.jpg" /></p>
 
 
 
@@ -53,6 +54,15 @@ Simulation for Drone Autonomous Flight with Lidar System
 
 
 ## 3. Train
+### 3. 1 Set Learning Environment
+<p align="center"><img width="75%" src="Images/Learning_001.jpg" /></p>
+
+### 3. 2 Training
+After set learning environment, start machine learning with `Anaconda3` like below.
+<p align="center"><img width="75%" src="Images/Anaconda_001.jpg" /></p>
+<p align="center"><img width="75%" src="Images/Anaconda_002.jpg" /></p>
+<p align="center"><img width="75%" src="Images/Anaconda_003.jpg" /></p>
+<p align="center"><img width="75%" src="Images/Anaconda_004.jpg" /></p>
 
 ## 4. Run
 
@@ -85,21 +95,3 @@ AIAutoTrader will trading 20 stocks that will give you the best returns.
 ### 5. 1 Daily Analysis
 
 <p align="center"><img width="100%" src="document/images/Daily_Analysis_001.png" /></p>
-<p align="center"><img width="100%" src="document/images/Daily_Analysis_002.png" /></p>
-<p align="center"><img width="100%" src="document/images/Daily_Analysis_003.png" /></p>
-<p align="center"><img width="100%" src="document/images/Daily_Analysis_004.png" /></p>
-<p align="center"><img width="100%" src="document/images/Daily_Analysis_005.png" /></p>
-<p align="center"><img width="100%" src="document/images/Daily_Analysis_006.png" /></p>
-<p align="center"><img width="100%" src="document/images/Daily_Analysis_007.png" /></p>
-<p align="center"><img width="100%" src="document/images/Daily_Analysis_008.png" /></p>
-
-### 5. 2 Monthly Analysis
-
-<p align="center"><img width="100%" src="document/images/Monthly_Analysis_001.png" /></p>
-<p align="center"><img width="100%" src="document/images/Monthly_Analysis_002.png" /></p>
-<p align="center"><img width="100%" src="document/images/Monthly_Analysis_003.png" /></p>
-<p align="center"><img width="100%" src="document/images/Monthly_Analysis_004.png" /></p>
-<p align="center"><img width="100%" src="document/images/Monthly_Analysis_005.png" /></p>
-<p align="center"><img width="100%" src="document/images/Monthly_Analysis_006.png" /></p>
-<p align="center"><img width="100%" src="document/images/Monthly_Analysis_007.png" /></p>
-<p align="center"><img width="100%" src="document/images/Monthly_Analysis_008.png" /></p>
