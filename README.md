@@ -44,7 +44,7 @@ This image shows how **`agent`** learn.
 
 ### 2. 3 LiDAR based on Automous Flight
 Simulation for Drone Autonomous Flight with Lidar System
-<p align="center"><img width="75%" src="Images/LiDAR_001.png" /></p>
+<p align="center"><img width="50%" src="Images/LiDAR_001.png" /></p>
 
 
 
