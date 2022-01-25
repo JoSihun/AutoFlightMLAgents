@@ -87,14 +87,14 @@ a reward is set according to the measured distance information.
 ## 4. Run
 
 ### 4. 1 TEST01
-<p align="center"><img width="75%" src="Images/Test_001.jpg" /></p>
+<p align="center"><img width="75%" src="Images/Test_001.png" /></p>
 
 - Tried 100 times.
 - Achieved about 24s Average Time.
 - Achieved 96% Accuracy.
 
 ### 4. 2 TEST02
-<p align="center"><img width="75%" src="Images/Test_002.png" /></p>
+<p align="center"><img width="75%" src="Images/Test_002.jpg" /></p>
 
 - Tried 100 times.
 - Achieved about 24s Average Time.
