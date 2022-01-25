@@ -16,8 +16,8 @@ This is Drone Autonomous Flight using Unity ML-Agents.
 - NVIDIA GeForce GTX 1060 6GB
 
 ### 1. 1 Unity ML-Agents
-Download recent version of release branch at https://github.com/Unity-Technologies/ml-agents.  
-The location of 'ml-agents' is like below or free.
+- Download recent version of release branch at https://github.com/Unity-Technologies/ml-agents.  
+- The location of 'ml-agents' is like below or free.  
 ```
 ㄴroot
   ㄴAutoFlight  
@@ -30,10 +30,14 @@ The location of 'ml-agents' is like below or free.
 
 ### 2. 1 Main Architecture
 This image shows how drone autonomous flight machine learning works.  
-Unity ML-Agents has 5 different functions.
+Unity ML-Agents has 5 different functions below.
 **`Initialize`, `OnEpisodeBegin`, `CollectObservations`, `OnActionReceived`, `Heuristic`.**
-
+**`Heuristic`** is excluded because it is just checking function that if actions work or not.
 <p align="center"><img width="75%" src="Images/Architecture_001.jpg" /></p>
+
+- First, get Environment Informations from Environment such as Map Information, Target Position, Agent Position etc.  
+- Then, update the reward and modify the behavior to get better reward from Unity ML Agent.  
+- During Learning, the learning information is transmitted to the MonitoringUI.  
 
 ### 2. 2 Sub Arhitecture
 This image shows how **`agent`** learn.
@@ -59,6 +63,9 @@ Simulation for Drone Autonomous Flight with Lidar System
 
 ### 3. 2 Training
 After set learning environment, start machine learning with `Anaconda3` like below.
+```anaconda3
+~/ml-agents> mlagents-learn config/ppo/AutoFlight.yaml --run-id=AutoFlight
+```
 <p align="center"><img width="75%" src="Images/Anaconda_001.png" /></p>
 <p align="center"><img width="75%" src="Images/Anaconda_002.png" /></p>
 <p align="center"><img width="75%" src="Images/Anaconda_003.png" /></p>
