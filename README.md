@@ -32,11 +32,11 @@ This image shows how machine learning works.
 Unity ML-Agents has 5 different functions which are  
 `Initialize`, `OnEpisodeBegin`, `CollectObservations`, `OnActionReceived`, `Heuristic`  
 **`Initialize`, `OnEpisodeBegin`, `CollectObservations`, `OnActionReceived`, `Heuristic`**
-<p align="center"><img width="100%" src="document/images/Daily_Analysis_001.png" /></p>
+<p align="center"><img width="100%" src="Images/image_001.jpg" /></p>
 
 ### 2. 2 Sub Arhitecture
 This image shows how **`agent`** learn.
-<p align="center"><img width="100%" src="document/images/Daily_Analysis_001.png" /></p>
+<p align="center"><img width="100%" src="Images/image_002.jpg" /></p>
 
 
 
