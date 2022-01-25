@@ -50,7 +50,7 @@ This is Drone Autonomous Flight using Unity ML-Agents.
 - After determining whether the object detected by the sensor is an obstacle or a target,  
 a reward is set according to the measured distance information.
 
-### 2. 3 LiDAR based on Automous Flight
+### 2. 3 LiDAR
 - This Autonomous Flight Simulation is based on LiDAR System.  
 
 <p align="center"><img width="50%" src="Images/LiDAR_001.png" /></p>
@@ -61,7 +61,12 @@ a reward is set according to the measured distance information.
 
 
 ## 3. Train
+
 ### 3. 1 Set Learning Environment
+- Set ramdomly placed 5 cylinder-shaped obstales.  
+- Set 100 Cube-shaped spaces of size 100m^3.  
+- Distributed Reinforcement Learning 3,500,000 steps.  
+
 <p align="center"><img width="75%" src="Images/Learning_001.png" /></p>
 
 ### 3. 2 Training
@@ -74,34 +79,30 @@ After set learning environment, start machine learning with `Anaconda3` like bel
 <p align="center"><img width="75%" src="Images/Anaconda_003.png" /></p>
 <p align="center"><img width="75%" src="Images/Anaconda_004.png" /></p>
 
+
 ## 4. Run
 
-### 4. 1 Analyzer.py
+### 4. 1 TEST01
+<p align="center"><img width="75%" src="Images/Test_001.jpg" /></p>
 ```bash
 
 ```
 - `Analyzer.py` will analyze the data of coin price at the time of execution.
 - Analyzed result will be saved in `root` directory as `.xlsm` file.
 
-### 4. 2 AutoTraderV1.py
-```
-python AutoTraderV1.py
-```
-AutoTrader will trading Top20 rate of increase.
-- You should edit Upbit API keys in `AutoTraderV1.py` which are `access_key` & `secret_key`.
-- This will be update as soon as possible.
+### 4. 2 TEST02
+<p align="center"><img width="75%" src="Images/Test_002.png" /></p>
 
-### 4. 3 AIAutoTraderV1.py
-```
-python AIAutoTraderV1.py
-```
-AIAutoTrader will trading 20 stocks that will give you the best returns.
-- You should edit Upbit API keys in `AIAutoTraderV1.py` which are `access_key` & `secret_key`.
-- This is unusable now cause it's not completed.
-- This will be update as soon as possible.
 
 ## 5. Results
 
-### 5. 1 Daily Analysis
+### 5. 1 Demo Simulation
 
-<p align="center"><img width="100%" src="document/images/Daily_Analysis_001.png" /></p>
+<p align="center"><img width="100%" src="Images/Demo_001.png" /></p>
+<p align="center"><img width="100%" src="Images/Demo_002.jpg" /></p>
+<p align="center"><img width="100%" src="Images/Demo_003.jpg" /></p>
+
+### 5. 2 Result Analize
+- Accuracy
+- Benefit
+- ETC
