@@ -117,7 +117,6 @@ a reward is set according to the measured distance information.
   확률적 경사하강법, 일부 데이터의 모음(Mini-Batch)으로 경사하강법을 수행하는 것  
   다소 부정확할 수 있으나 빠른 계산 속도를 가짐  
 
-
 ### 3. 4 AutoFlight.yaml
 - Make `yaml` file like below.
 
@@ -157,8 +156,11 @@ a reward is set according to the measured distance information.
 
 
 ## 4. Run
+Run 5 times of the model trained above, 100 times each for the following two environments.  
 
 ### 4. 1 TEST01
+- 원기둥 형태의 장애물 20개를 배치한 1km 길이의 일자형 트랙  
+
 <p align="center"><img width="75%" src="Images/Test_001.jpg" /></p>
 
 - Tried 100 times.
@@ -166,11 +168,25 @@ a reward is set according to the measured distance information.
 - Achieved 96% Accuracy.
 
 ### 4. 2 TEST02
+- 사물 형태의 장애물 244개를 배치한 1km 길이의 일자형 트랙  
+
 <p align="center"><img width="75%" src="Images/Test_002.png" /></p>
 
 - Tried 100 times.
 - Achieved about 24s Average Time.
 - Achieved 86% Accuracy.
+
+### 4. 3 Test Result
+![image](https://user-images.githubusercontent.com/59362257/151134061-5691f52a-f670-4276-a49e-2001b75375f1.png)
+![image](https://user-images.githubusercontent.com/59362257/151134068-dbd46353-d922-4a0b-8c5e-4f399fe240e1.png)
+
+|Classification|Environment1|Environment2|
+|---|---|---|
+|Average Accuracy|94.00%|87.20%|
+|Average Time|24.00s|24.15s|
+
+- 환경에 따라 다소의 차이는 있으나, 대체로 목적지를 찾아가는 것을 확인
+- 한 번의 학습으로 학습되지 않은 환경에서도 자율비행 가능
 
 ### 4. 4 Demo Simulation
 
@@ -181,6 +197,7 @@ a reward is set according to the measured distance information.
 - Tried 100 times.
 - Achieved about 11.5s Average Time.
 - Achieved 89% Accuracy.
+
 
 ## 5. Results
 
