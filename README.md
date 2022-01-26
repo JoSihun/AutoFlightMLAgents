@@ -59,6 +59,14 @@ a reward is set according to the measured distance information.
 - Measure time of flight(ToF) for light to return.  
 - Measure the distance(D) to the target using the constant speed of light(c).  
 
+### 2. 4 Distance Reward
+
+<p align="left"><img width="25%" src="https://user-images.githubusercontent.com/59362257/151125351-7080759b-cb8a-4309-8edb-c00e02df680e.png"/></p>
+
+- Using Unity RayCast to implement LiDAR functionality.
+- Normalize the measurement distance to a value of 0 to 1 by divided by the limit distance.
+- If no object is detected within range, return -1.
+
 
 ## 3. Train
 
@@ -71,7 +79,17 @@ a reward is set according to the measured distance information.
 
 ### 3. 2 AutoFlight.yaml
 - Make `yaml` file like below.
-<p align="center"><img width="75%" src="Images/yamlfile.png" /></p>
+
+<p align="center"><img width="25%" src="https://user-images.githubusercontent.com/59362257/151126806-635b9693-aaba-4d9d-a3c8-f150f7ab6116.png"/></p>
+
+- Key Parameters
+|Parameter Name|Description|
+|:---|:---|
+|batch_size|경사하강 1회 업데이트에 사용할 경험의 수|
+|learning_rate|경사하강 학습의 정도|
+|epsilon|이전 정책과 새 정책 사이의 비율 크기 제한|
+|max_steps|학습할 총 step 수|
+
 
 ### 3. 3 Training
 - After set learning environment, start machine learning with `Anaconda3` like below.  
@@ -100,14 +118,17 @@ a reward is set according to the measured distance information.
 - Achieved about 24s Average Time.
 - Achieved 86% Accuracy.
 
-
-## 5. Results
-
-### 5. 1 Demo Simulation
+### 4. 4 Demo Simulation
 
 <p align="center"><img width="75%" src="Images/Demo_001.png" /></p>
 <p align="center"><img width="75%" src="Images/Demo_002.jpg" /></p>
 <p align="center"><img width="75%" src="Images/Demo_003.jpg" /></p>
+
+- Tried 100 times.
+- Achieved about 11.5s Average Time.
+- Achieved 89% Accuracy.
+
+## 5. Results
 
 ### 5. 2 Result Analize
 - Accuracy
