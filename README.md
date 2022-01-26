@@ -32,6 +32,16 @@ This is Drone Autonomous Flight using Unity ML-Agents.
 - This image shows how drone autonomous flight machine learning works.  
 - Unity ML-Agents has 5 different functions below.  
 **`Initialize`, `OnEpisodeBegin`, `CollectObservations`, `OnActionReceived`, `Heuristic`.**
+  - Initialize  
+    Initialization such as importing Unity object information.  
+  - OnEpisodeBegin  
+    Initialization of location and speed information of Agent, Target, etc. at the start of an episode.  
+  - CollectObservations  
+    Observation of environmental information for policy making.  
+  - OnActionReceived  
+    Conduct actions according to the determined policy
+  - Heuristic  
+    Manipulated by the developer to make sure the behavior works well.
 - **`Heuristic`** is excluded because it is just checking function that if actions work or not.  
 
 <p align="center"><img width="75%" src="Images/Architecture_001.jpg" /></p>
@@ -77,12 +87,44 @@ a reward is set according to the measured distance information.
 
 <p align="center"><img width="75%" src="Images/Learning_001.png" /></p>
 
-### 3. 2 AutoFlight.yaml
+### 3. 2 Training Data
+
+|Observe Status|Params|Description|
+|:---|---|:---|
+|Agent Position|3|드론의 위치정보|
+|Agent Velocity|3|드론의 속도정보|
+|Agent Angular Velocity|3|드론의 각속도 정보|
+|Target Position|3|목표지점의 위치정보|
+|Ray Observation|9|LiDAR 탐지물체 거리정보|
+
+- 21개의 상태정보
+- 3가지 행동(x, y, z축 이동)
+- 상태정보(21개)를 통해 행동(3가지)을 결정
+
+### 3. 3 PPO
+- The machine learning of this project is based on PPO.
+- 매 Iteration마다 N개의 Actor가 T개의 timestep만큼의 데이터를 모아 학습하는 방식
+- NT개의 데이터를 통해 surrogate loss를 형성하고, minibatch SGD를 적용해 학습
+- K epoch에 걸쳐 반복
+
+<p align="center"><img width="75%" src="https://user-images.githubusercontent.com/59362257/151132334-e20f7d1c-2250-476c-9056-7b5a2d4d2667.png" /></p>
+
+- Actor-Critic  
+  Actor는 상태가 주어졌을 때 행동결정, Critic은 상태의 가치를 평가
+- Surrogate Loss Function  
+  대리손실함수, 손실함수가 경사하강법(SGD) 기반의 최적화 알고리즘 사용하는 것이 불가능할 때, 이를 대신하는 손실함수
+- SGD(Stochastic Gradient Descent)  
+  확률적 경사하강법, 일부 데이터의 모음(Mini-Batch)으로 경사하강법을 수행하는 것  
+  다소 부정확할 수 있으나 빠른 계산 속도를 가짐  
+
+
+### 3. 4 AutoFlight.yaml
 - Make `yaml` file like below.
 
-<p align="center"><img width="25%" src="https://user-images.githubusercontent.com/59362257/151126806-635b9693-aaba-4d9d-a3c8-f150f7ab6116.png"/></p>
+<p align="left"><img width="25%" src="https://user-images.githubusercontent.com/59362257/151126806-635b9693-aaba-4d9d-a3c8-f150f7ab6116.png"/></p>
 
-- Key Parameters
+- Key Parameters  
+
 |Parameter Name|Description|
 |:---|:---|
 |batch_size|경사하강 1회 업데이트에 사용할 경험의 수|
@@ -142,7 +184,11 @@ a reward is set according to the measured distance information.
 
 ## 5. Results
 
-### 5. 2 Result Analize
-- Accuracy
-- Benefit
-- ETC
+- 정확도  
+  학습되지 않은 환경에서도 높은 정확도를 보임  
+- 속도  
+  동일거리에 대해 항상 일정한 속도로 목표지점 도달  
+- 목적 달성의 용이성  
+  강화학습은 목적에 따라 적절한 보상설계를 통해 효율적으로 목적 달성 가능  
+- 한 번의 학습으로 학습되지 않은 환경에서도 자율비행 가능  
+  한정된 자원으로 여러 다른 문제 해결 가능  
