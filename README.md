@@ -90,9 +90,9 @@ a reward is set according to the measured distance information.
 |epsilon|이전 정책과 새 정책 사이의 비율 크기 제한|
 |max_steps|학습할 총 step 수|
 
-
 ### 3. 3 Training
 - After set learning environment, start machine learning with `Anaconda3` like below.  
+- Start Training 3,500,000 Steps.
 ```anaconda3
 ~/ml-agents> mlagents-learn config/ppo/AutoFlight.yaml --run-id=AutoFlight
 ```  
@@ -100,6 +100,18 @@ a reward is set according to the measured distance information.
 <p align="center"><img width="75%" src="Images/Anaconda_002.png" /></p>
 <p align="center"><img width="75%" src="Images/Anaconda_003.png" /></p>
 <p align="center"><img width="75%" src="Images/Anaconda_004.png" /></p>
+
+### 3. 4 Training Result
+
+<p align="center"><img width="100%" src="https://user-images.githubusercontent.com/59362257/151128795-5142eab1-a63d-49a8-95ce-63a94f90699f.png" /></p>
+
+1,500,000 ~ 2,000,000 Step부터 보상이 증가하지 않음  
+- Cumulative Reward  
+모든 에이전트에 대한 평균 누적 에피소드 보상
+- Extrinsic Reward  
+에피소드당 환경에서 받는 평균 누적 보상
+- Extrinsic Value Estimate  
+에이전트가 방문한 모든 상태에 대한 평균값 추정치
 
 
 ## 4. Run
